@@ -1,0 +1,16 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: stock-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    group-id: stock-service
+    topics:
+      orders: orders
+      stockOrder: stock-order
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:2700/commerce?useLegacyDatetimeCode=false&serverTimezone=Asia/Jakarta
